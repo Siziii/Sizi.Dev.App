@@ -93,7 +93,7 @@ const ProjectPage = ({ id }) => {
                         </Reveal>
                     </div>
 
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 flex-wrap">
                         {project.tech_icons.map((icon, index) => (
                             <Reveal key={index} direction='left' delay={index / 10 + .4}>
                                 <div key={index} className="flex justify-center group">

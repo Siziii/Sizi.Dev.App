@@ -67,7 +67,7 @@ const MainPage = () => {
                 <Navbar />
             </div>
 
-            <section ref={HomeRef} id="home" className="h-[calc(100vh-8rem)] bg-gray01">
+            <section ref={HomeRef} id="home" className="min-h-[calc(100vh-8rem)] bg-gray01">
                 <Hero />
             </section>
             <section ref={AboutRef} id="about" className="bg-gray03">

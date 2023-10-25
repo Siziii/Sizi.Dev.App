@@ -56,7 +56,7 @@ const projectData = [
         tech_title: 'Built with:',
         tech: ['React', 'Vite', 'Tailwindcss', 'Framer Motion', 'Vercel', 'Github', 'Figma'],
         btn01_text: 'Visit Site',
-        btn01_link: 'https://ivan-skara.vercel.app/',
+        btn01_link: 'https://ivanskara.dev/',
         btn02_text: 'View code',
         btn02_link: 'https://github.com/Siziii/Sizi.Dev.App/',
         image: PortfolioImage,

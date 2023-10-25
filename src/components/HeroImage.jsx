@@ -61,13 +61,13 @@ const HeroImage = () => {
                 </div>
                 
             </div>
-            <div className='xl:hidden w-full flex justify-center absolute'>
+            <div className='xl:hidden w-full flex justify-center'>
                 <div className='absolute w-20 xs:w-24 opacity-50 lg:-translate-x-16 lg:-translate-y-12 -translate-x-8 xs:-translate-x-14 translate-y-12'>
                     <Reveal delay={1.2}>
-                    <img src={natasha} alt="natasha" />
+                    <img src={natasha} alt="natasha" className=''/>
                     </Reveal>
                 </div>
-                <img src={heroImageMobile} alt="heroimage" className='absolute w-full max-w-md mt-24 lg:mt-0' />
+                <img src={heroImageMobile} alt="heroimage" className='w-full max-w-md mt-24 lg:mt-0 mb-4' />
             </div>
         </div>
 
