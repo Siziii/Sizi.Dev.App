@@ -78,7 +78,7 @@ const projectData = [
     },
     {
         id: 'KickSnare',
-        title: 'KickSnare:',
+        title: 'KickSnare',
         subtitle: 'PC Game',
         paragraph: "In 2021, as part of a Game Development class and drawing inspiration from my passion for music production, I created an arcade game called 'Kick Snare'. It is a game that tests player's ability to synchronise rhythm and gameplay. Game is made in Unity Engine (C#).",
         tech_title: 'Built with:',

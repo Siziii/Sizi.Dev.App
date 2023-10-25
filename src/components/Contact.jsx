@@ -33,7 +33,7 @@ const Contact = () => {
                     </Reveal>
                     <Reveal direction="left" delay={.2}>
                     <p className="text-lg">You can reach out to me by sending message to:</p>
-                    <a className="text-primary text-lg font-bold mb-8" href="mailto:ivanskara2@gmail.com">ivanskara2@gmail.com</a>
+                    <a className="text-primary text-lg font-bold mb-8" href="mailto:ivanskara2@gmail.com">sizi.dev.contact@gmail.com</a>
                     </Reveal>
                     <Reveal>
                     <p className="mb-4 text-gray02">Alternatively, you can use the contact form below</p>
