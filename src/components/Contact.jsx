@@ -81,7 +81,7 @@ const Contact = () => {
                                 Send Message
                             </button>
                             <div className="w-full flex justify-center sm:justify-start">
-                                <Link to="about" smooth={true} duration={500}>
+                                <Link to="home" smooth={true} duration={500}>
                                     <button className="border-2 py-2 w-40 mt-8 rounded-full hover:bg-white hover:text-gray03 transition-all">Back to home</button>
                                 </Link>
                             </div>
