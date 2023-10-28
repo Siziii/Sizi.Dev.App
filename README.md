@@ -1,13 +1,12 @@
 # Sizi's Personal Portfolio Website
 
-Welcome to my portfolio project!
+Welcome to the repository of my portfolio website!
+It serves as a platform to showcase various projects and experiences. Feel free to fork, tinker, or even steal few ideas.
 
-Welcome to the repository of my portfolio website, Sizi.Dev.App! This website is designed and built using Figma, React, Vite, Tailwind CSS, and Framer Motion. It serves as a platform to showcase various projects and experiences. Feel free to fork, tinker, or even steal few ideas.
+The project is made with Vite & React and styled with Tailwind & Framer Motion. It has been deployed and is accessible online via Vercel at [IvanSkara.dev](https://ivanskara.dev).
 
-The project is made with Vite & React and styled with Tailwind & Framer Motion. It has been deployed and is accessible online via Vercel at [IvanSkara.dev](https://plantpulse.vercel.app/).
-
-<a href="https://plantpulse.vercel.app/">
-  <img src="https://plantpulse.vercel.app/assets/logo-36b62bc2.svg" alt="PlantPulse Logo" width="50" height="50" style="display: block; margin: 0 auto;">
+<a href="https://ivanskara.dev/">
+  <img src="https://ivanskara.dev/assets/logo-79c07118.svg" alt="logo" width="50" height="50" style="display: block; margin: 0 auto;">
 </a>
 
 ## Getting Started Locally
@@ -38,4 +37,4 @@ Once the dependencies are installed, you can start the development server:
 ```
 npm run dev
 ```
-Access the website in your web browser at: http://localhost:5174/
+Access the website in your web browser at: http://localhost:5173/
