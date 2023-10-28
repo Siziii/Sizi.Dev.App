@@ -8,7 +8,6 @@ import Socials from "./Socials";
 import ContactButton from "./ContactButton";
 import Contact from "./Contact";
 import Navbar from "./Navbar";
-
 const MainPage = () => {
     const initialActivePage = localStorage.getItem('activepage') || 'home';
     const [activepage, setActivePage] = useState(initialActivePage);
@@ -51,7 +50,6 @@ const MainPage = () => {
 
     return (
         <div className="scroll-smooth bg-gray01 overflow-hidden">
-
             <div className="hidden md:block">
                 <ScrollIndicator activepage={activepage} />
                 <ContactButton activepage={activepage} />

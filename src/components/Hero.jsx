@@ -13,7 +13,7 @@ const Hero = () => {
     })
     return (
         <div className=" w-[80%] h-full flex flex-col lg:flex-row mt-32 mx-auto">
-
+   
             <div className="w-full lg:w-1/2 xl:w-2/5 flex justify-center lg:justify-end">
                 <div className="flex flex-col items justify-center">
                     <div className="flex">
@@ -47,7 +47,8 @@ const Hero = () => {
                 </div>
             </div>
             <div className="w-full lg:w-1/2 xl:w-3/5">
-                <HeroImage />
+                <HeroImage/>
+                
             </div>
             <div className="lg:hidden absolute left-[50vw] top-[90vh] -translate-x-1/2">
                     <Reveal>
