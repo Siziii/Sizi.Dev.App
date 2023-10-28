@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { FiMail } from "react-icons/fi";
 import { useForm, ValidationError } from '@formspree/react';
 import Reveal from "../utils/Reveal";
 import { Link } from "react-scroll";
-import Spline from '@splinetool/react-spline';
+
+//lazy load 3dAnims
+const LazyWorld_desktop = lazy(() => import('./Anims/World_desktop'));
+const LazyWorld_mobile = lazy(() => import('./Anims/World_mobile'));
+
 const Contact = () => {
 
     const [state, handleSubmit] = useForm("xpzgblqn");
@@ -14,18 +18,18 @@ const Contact = () => {
     };
     const rows = message.split('\n').length;
 
+    const isMobile = window.innerWidth <= 400;
+
+    console.log('isMobile' + isMobile)
     return (
         <div className="bg-gray0 sm:rounded-lg flex justify-center items-center w-full h-full ">
             <div className="flex flex-col lg:flex-row w-[80%] justify-center pb-16 lg:pt-16">
-                <div className="xs:hidden flex justify-center items-center lg:w-1/3 xl:w-1/2">
-                    <Reveal>
-                        <Spline scene="https://prod.spline.design/9YkdQmXt7qDf50a2/scene.splinecode" />
-                    </Reveal>
-                </div>
-                <div className="hidden xs:flex justify-center items-center lg:w-1/3 xl:w-1/2">
-                    <Reveal>
-                        <Spline scene="https://prod.spline.design/P5Qp3-R4gLvgDOVb/scene.splinecode" />
-                    </Reveal>
+                <div className="flex justify-center items-center w-full lg:w-1/3 xl:w-1/2 h-[300px] xs:h-[400px]">
+                    <Suspense fallback="Loading Animation...">
+                        <div>
+                            {isMobile ? <LazyWorld_mobile /> : <LazyWorld_desktop />}
+                        </div>
+                    </Suspense>
                 </div>
                 <div className="flex flex-col lg:w-2/3 xl:w-1/2">
                     <Reveal>
@@ -48,7 +52,6 @@ const Contact = () => {
                             <input
                                 className="mb-2 h-12 px-6  rounded-md bg-gray01 outline-none border-none"
                                 placeholder="example@gmail.com"
-
                                 id="email"
                                 type="email"
                                 name="email"
@@ -88,7 +91,6 @@ const Contact = () => {
                         </form>
                     </Reveal>
                 </div>
-
             </div>
         </div>
     );
