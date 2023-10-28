@@ -21,7 +21,7 @@ const ProjectPage = ({ id }) => {
     }
 
     return (
-        <div className="bg-gray01 w-screen min-h-screen md:h-screen">
+        <div className="bg-gray01 w-screen min-h-screen md:h-screen overflow-hidden">
             <div className='z-20 absolute h-24 w-full'>
                 <div className='flex justify-end items-center h-full mr-3 sm:mr-12'>
                     <Reveal delay={1}>
@@ -63,7 +63,7 @@ const ProjectPage = ({ id }) => {
                 </div>
             </div>
             <div className="flex w-full h-full flex-col md:flex-row">
-                
+
                 <div className="w-full md:w-1/2 h-full bg-gray04">
                     <div className='w-full h-full flex justify-center items-center'>
                         <img src={project.image} alt="project_image" className='z-10 w-[80%] mb-8 mt-24 md:m-0 max-w-xl rounded-lg md:hover:scale-110 md:hover:brightness-105 transition-all duration-300 shadow-[0px_50px_30px_-50px_rgba(0,0,0,.5)] md:hover:shadow-[0px_20px_30px_-50px_rgba(0,0,0,1)]' />
