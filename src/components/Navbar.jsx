@@ -83,7 +83,7 @@ const Navbar = () => {
                     </AnimatePresence>
                 </div>
             </div>
-            <div className={`z-20 fixed w-screen h-screen bg-black-overlay ${isNavVisible ? 'visible' : 'hidden'}`} />
+            <div className={`z-20 fixed w-screen h-screen bg-black-overlay ${isNavVisible ? 'visible' : 'hidden'}`} onClick={handleNav}/>
         </>
     );
 }
