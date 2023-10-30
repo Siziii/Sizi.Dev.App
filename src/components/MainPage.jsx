@@ -25,19 +25,15 @@ const MainPage = () => {
     useEffect(() => {
         if (isHomeInView) {
             setActivePage('home')
-            console.log("home Is in view -> ", isHomeInView);
         }
         else if (isAboutInView) {
             setActivePage('about')
-            console.log("about Is in view -> ", isAboutInView);
         }
         else if (isProjectsInView) {
             setActivePage('projects')
-            console.log("projects Is in view -> ", isProjectsInView);
         }
         else if (isContactInView) {
             setActivePage('contact')
-            console.log("contact Is in view -> ", isContactInView);
         }
     }, [isHomeInView, isAboutInView, isProjectsInView, isContactInView]);
 

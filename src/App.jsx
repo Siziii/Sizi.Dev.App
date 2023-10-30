@@ -6,6 +6,16 @@ import projectData from './data/projectData';
 import ScrollToAnchor from "./utils/ScrollToAnchor";
 
 function App() {
+  console.log(`
+
+  ██╗  ██╗███████╗██╗     ██╗      ██████╗ ██╗
+  ██║  ██║██╔════╝██║     ██║     ██╔═══██╗██║
+  ███████║█████╗  ██║     ██║     ██║   ██║██║
+  ██╔══██║██╔══╝  ██║     ██║     ██║   ██║╚═╝
+  ██║  ██║███████╗███████╗███████╗╚██████╔╝██╗
+  ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ ╚═╝
+                                              
+  `)
   return (
     <> 
     <ScrollToAnchor/>
@@ -20,7 +30,6 @@ function App() {
       ))}
       <Route path="*" element={<Page404/>}/>
     </Routes>
-      
     </>
   );
 }
