@@ -84,7 +84,7 @@ const projectData = [
         tech_title: 'Built with:',
         tech: ['Unity 3D', 'Photoshop', 'Illustrator'],
         btn01_text: 'Download Game',
-        btn01_link: '',
+        btn01_link: 'https://siziii.itch.io/kick-snare',
         image: KickSnareImage,
         logo: KickSnareLogo,
         theme:'#cb2c2c'
