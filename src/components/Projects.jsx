@@ -21,7 +21,7 @@ const Projects = () => {
             <div className="flex flex-col w-full h-full justify-center py-16">
                 <div className="flex flex-col items-center">
                     <h2 className="text-primary font-bold text-1xl sm:text-2xl">~ From Concept to Creation ~</h2>
-                    <h1 className="font-bold text-2xl sm:text-5xl mb-8">Discover what I've built</h1>
+                    <h1 className="font-bold text-2xl sm:text-7xl mb-8 uppercase">Discover what I've built</h1>
                 </div>
                 <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                     {webDevProjects.map((project) => (

@@ -67,10 +67,10 @@ const MainPage = () => {
             <section ref={AboutRef} id="about" className="bg-gray03">
                 <About />
             </section>
-            <section ref={ProjectsRef} id="projects" className="bg-gray04">
+            <section ref={ProjectsRef} id="projects" className="bg-gray03">
                 <Projects />
             </section>
-            <section ref={ContactRef} id="contact" className="bg-gray03">
+            <section ref={ContactRef} id="contact" className="bg-gray01">
                 <Contact />
             </section>
         </div>

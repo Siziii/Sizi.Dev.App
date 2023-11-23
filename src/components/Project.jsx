@@ -1,40 +1,51 @@
 import React, { useState } from 'react';
-import Reveal from '../utils/Reveal';
+import Tilt from '../utils/Tilt';
 import { Link as RouterLink} from 'react-router-dom';
+import Reveal from '../utils/Reveal';
 
 const Project = ({ project_img, project_name, project_group, project_link }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <>
             <RouterLink to={project_link}>
+                <Reveal delay={.2}>
+                <Tilt>
                 <div
-                    className="rounded-md bg-gray01 cursor-pointer group"
+                    className="rounded-md bg-gray01 cursor-pointer group aspect-square"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
+                    style={{transformStyle: "preserve-3d"}}
                 >
-                    <Reveal>
-                        <div className="w-full h-56 bg-black rounded-t-md overflow-hidden">
-                            <img
+                        <div
+                            className="w-full h-3/4 overflow-hidden p-3 transition-all duration-300"
+                            style={{transform: "translateZ(20px)"}}
+                        >
+                            <div className='bg-[#1d1e1f] w-full h-full rounded-md'>
+
+                            </div>
+                            {/* <img
                                 src={project_img}
                                 alt={project_name}
-                                className="group-hover:scale-110 group-hover:opacity-100 opacity-90 object-cover w-full h-full transition-all duration-300 origin-center cursor-pointer"
-                            />
+                                className="object-cover w-full h-full cursor-pointer rounded-md"
+                            /> */}
                         </div>
-                        <div className="h-24 flex flex-col justify-center px-8">
-                            <Reveal direction='left'>
-                                <h1 className="text-3xl font-bold">{project_name}</h1>
-                            </Reveal>
-                            <Reveal direction='left' delay={.2}>
+                        <div className="h-1/4  flex flex-col justify-center px-8" style={{transformStyle: "preserve-3d"}}>
+
+                                <h1 className="text-3xl font-bold" style={{transform: "translateZ(40px)"}}>{project_name}</h1>
+
+
                                 <span
                                     className="font-bold text-gray02"
+                                    style={{transform: "translateZ(30px)"}}
                                 >
                                     {isHovered ? 'Show project' : project_group}
                                 </span>
-                            </Reveal>
+
                         </div>
 
-                    </Reveal>
                 </div>
+                </Tilt>
+                </Reveal>
             </RouterLink>
         </>
     );

@@ -8,9 +8,9 @@ export default {
     extend: {
       colors:{
         'primary': '#18d1b0',
-        'gray01': '#1C1D1E',
+        'gray01': '#151516',
         'gray02': '#6B6B6B',
-        'gray03': '#161717',
+        'gray03': '#0b0b0c',
         'gray04': '#101111',
         'black-overlay':'rgba(36, 38, 39, 0.6)',
       },
