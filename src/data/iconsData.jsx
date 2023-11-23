@@ -1,6 +1,6 @@
 import { BiLogoUnity } from "react-icons/bi";
 import { BsPenFill } from "react-icons/bs";
-import { SiAdobeillustrator, SiAdobephotoshop, SiAdobexd, SiAndroidstudio, SiBlender, SiBootstrap, SiCss3, SiDjango, SiDocker, SiFigma, SiFramer, SiGit, SiGithub, SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiVercel, SiVite } from "react-icons/si";
+import { SiAdobeillustrator, SiAdobephotoshop, SiAdobexd, SiAndroidstudio, SiBlender, SiBootstrap, SiCss3, SiDjango, SiDocker, SiFigma, SiFramer, SiGit, SiGithub, SiHtml5, SiJavascript, SiReact, SiSass, SiTailwindcss, SiVercel, SiVisualstudio, SiVite } from "react-icons/si";
 import Quixel from '../assets/quixel.svg';
 import Designer from '../assets/substance_d.svg';
 import Painter from '../assets/substance_p.svg';
@@ -30,6 +30,8 @@ const techIcons = [
         { name: 'React', icon: <SiReact size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" /> },
         { name: 'Django', icon: <SiDjango size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" /> },
         { name: 'Androidstudio', icon: <SiAndroidstudio size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" /> },
+        { name: 'Sass', icon: <SiSass size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" /> },
+        { name: 'Visual Studio', icon: <SiVisualstudio size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" /> },
 ];
 
 export default techIcons;

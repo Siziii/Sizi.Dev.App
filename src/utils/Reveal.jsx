@@ -42,6 +42,7 @@ const Reveal = ({ children, direction = "bottom", delay = 0 }) => {
                 transition={{
                     duration: 0.3
                 }}
+                className="w-full h-full"
             >
                 {children}
             </motion.div>
