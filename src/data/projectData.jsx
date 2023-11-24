@@ -6,6 +6,12 @@ import KickSnareImage from '../assets/project-images/kicksnare.jpg';
 import RustSkinsImage from '../assets/project-images/rustskins.jpg';
 import PortfolioImage from '../assets/project-images/portfolio.jpg';
 
+import PlantpulseThumbnail from "../assets/project-images/plantpulse_thumbnail.jpg"; 
+import ArtStationThumbnail from "../assets/project-images/artstation_thumbnail.jpg"; 
+import ColorPickerThumbnail from "../assets/project-images/colorpicker_thumbnail.jpg"; 
+import KickSnareThumbnail from "../assets/project-images/kicksnare_thumbnail.jpg";
+import RustSkinsThumbnail from "../assets/project-images/rustskins_thumbnail.jpg"; 
+import PortfolioThumbnail from"../assets/project-images/portfolio_thumbnail.jpg";
 
 import PlantPulseLogo from '../assets/project-logos/plantpulse_logo.svg';
 import ArtstationLogo from '../assets/project-logos/artstation_logo.svg';
@@ -30,7 +36,10 @@ const projectData = [
         btn02_link: 'https://github.com/Siziii/PlantPulse',
         image: PlantPulseImage,
         logo: PlantPulseLogo,
-        theme:'#beb0a6'
+        theme: '#beb0a6',
+        thumbnail: PlantpulseThumbnail,
+        project_group:'Web Development',
+        project_link:'/projects/Plant-Pulse',
     },
     {
         id: 'Color-Picker',
@@ -45,12 +54,15 @@ const projectData = [
         btn02_link: 'https://github.com/Siziii/ColorPicker',
         image: ColorPickerImage,
         logo: ColorPickerLogo,
-        theme:'#1570e5'
+        theme:'#1570e5',
+        thumbnail: ColorPickerThumbnail,
+        project_group:'Web Development',
+        project_link:'/projects/Color-Picker',
     },
 
     {
         id: 'Portfolio-Website',
-        title: 'Portfolio Website',
+        title: 'Portfolio',
         subtitle: 'Personal Website',
         paragraph: "You're currently browsing my portfolio website, which I designed and built using Figma, React, Vite, Tailwind CSS, and Framer Motion. It serves as a platform to showcase my various projects and experiences. If you're curious, it's also open source on GitHub, so feel free to fork, tinker, or even steal a few ideas. This site is hosted on Vercel, adding to its smooth performance and accessibility. Enjoy your visit!",
         tech_title: 'Built with:',
@@ -61,7 +73,10 @@ const projectData = [
         btn02_link: 'https://github.com/Siziii/Sizi.Dev.App/',
         image: PortfolioImage,
         logo: PortfolioLogo,
-        theme:'#18d1b0'
+        theme:'#18d1b0',
+        thumbnail: PortfolioThumbnail,
+        project_group:'Web Development',
+        project_link:'/projects/Portfolio-Website',
     },
     {
         id: 'Rust-Skins',
@@ -74,7 +89,10 @@ const projectData = [
         btn01_link: 'https://steamcommunity.com/id/JohnCisors/myworkshopfiles',
         image: RustSkinsImage,
         logo: RustSkinsLogo,
-        theme:'#b93a26'
+        theme:'#b93a26',
+        thumbnail: RustSkinsThumbnail,
+        project_group:'3D Art',
+        project_link:'/projects/Rust-Skins',
     },
     {
         id: 'KickSnare',
@@ -87,11 +105,14 @@ const projectData = [
         btn01_link: 'https://siziii.itch.io/kick-snare',
         image: KickSnareImage,
         logo: KickSnareLogo,
-        theme:'#cb2c2c'
+        theme:'#cb2c2c',
+        thumbnail: KickSnareThumbnail,
+        project_group:'Game Development',
+        project_link:'/projects/KickSnare',
     },
     {
         id: 'Artstation-Portfolio',
-        title: 'Artstation Portfolio',
+        title: 'Artstation',
         subtitle: '3D Art Showcase',
         paragraph: "Here, I showcase my passion for creating 3D art. I specialize in hard surface modeling using Blender, the creation of seamless procedural textures with Substance Designer and procedural texturing in Substance Painter. If you're curious about my process, feel free to reach out with any questions or collaborations.",
         tech_title: 'Tools used:',
@@ -101,6 +122,9 @@ const projectData = [
         image: ArtstationImage,
         logo: ArtstationLogo,
         theme:'#13aff0',
+        thumbnail: ArtStationThumbnail,
+        project_group:'3D Art',
+        project_link:'/projects/Artstation-Portfolio',
     },
 
 ];

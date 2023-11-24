@@ -33,7 +33,7 @@ const Artist = () => {
 
                         <h2 className="text-primary font-semibold mb-2">Things I enjoy:</h2>
 
-                        <span className="text-gray02">Hard surface modeling, Procedural textures</span>
+                        <span className="opacity-50">Hard surface modeling, Procedural textures</span>
 
                         <h2 className="text-primary font-semibold mt-6 mb-2">Program Stack:</h2>
 
@@ -41,7 +41,7 @@ const Artist = () => {
                             {programStackIcons.map((icon, index) => (
                                 <div key={index} className="flex justify-center group">
                                     {icon}
-                                    <span className="pointer-events-none opacity-0 absolute translate-y-4 group-hover:translate-y-8 group-hover:opacity-100 transition-all">
+                                    <span className="pointer-events-none opacity-0 absolute translate-y-4 group-hover:translate-y-8 group-hover:opacity-100 transition-all whitespace-nowrap">
                                         {programStack[index]}
                                     </span>
                                 </div>

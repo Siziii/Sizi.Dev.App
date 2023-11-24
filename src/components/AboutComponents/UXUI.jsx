@@ -32,7 +32,7 @@ const UXUI = () => {
                 <div className="flex h-full flex-col items-center" style={{ transform: "translateZ(20px)" }}>
                     <h2 className="text-primary font-semibold mb-2">Things I enjoy designing:</h2>
 
-                    <span className="text-gray02">UX, UI, Web, Apps, Logos</span>
+                    <span className="opacity-50">UX, UI, Web, Apps, Logos</span>
 
                     <h2 className="text-primary font-semibold mt-6 mb-2">Program Stack:</h2>
 
@@ -40,7 +40,7 @@ const UXUI = () => {
                         {programStackIcons.map((icon, index) => (
                             <div key={index} className="flex justify-center group">
                                 {icon}
-                                <span className="pointer-events-none opacity-0 absolute translate-y-4 group-hover:translate-y-8 group-hover:opacity-100 transition-all">
+                                <span className="pointer-events-none opacity-0 absolute translate-y-4 group-hover:translate-y-8 group-hover:opacity-100 transition-all whitespace-nowrap">
                                     {programStack[index]}
                                 </span>
                             </div>

@@ -3,49 +3,49 @@ import Tilt from '../utils/Tilt';
 import { Link as RouterLink} from 'react-router-dom';
 import Reveal from '../utils/Reveal';
 
-const Project = ({ project_img, project_name, project_group, project_link }) => {
-    const [isHovered, setIsHovered] = useState(false);
+const Project = ({thumbnail, title, group, link, paragraph,logo}) => {
+    const truncateText = (text, maxLength) => {
+        if (text.length > maxLength) {
+          return text.slice(0, maxLength) + '...';
+        }
+        return text;
+     }
+      
     return (
         <>
-            <RouterLink to={project_link}>
-                <Reveal delay={.2}>
-                <Tilt>
+            <RouterLink to={link}>
+                <Reveal delay={.2}><Tilt>
+                
                 <div
-                    className="rounded-md bg-gray01 cursor-pointer group aspect-square"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
+                    className="rounded-md bg-gray01 cursor-pointer group flex flex-row p-4 gap-4 w-full"
                     style={{transformStyle: "preserve-3d"}}
                 >
-                        <div
-                            className="w-full h-3/4 overflow-hidden p-3 transition-all duration-300"
-                            style={{transform: "translateZ(20px)"}}
-                        >
-                            <div className='bg-[#1d1e1f] w-full h-full rounded-md'>
 
-                            </div>
-                            {/* <img
-                                src={project_img}
-                                alt={project_name}
-                                className="object-cover w-full h-full cursor-pointer rounded-md"
-                            /> */}
+                <div className='flex flex-col justify-between sm:w-1/2 gap-5' style={{transformStyle: "preserve-3d"}}>
+
+                    <div className='flex gap-4 items-center'  style={{ transform: "translateZ(40px)" }}>
+                        <div className='w-10 h-10 sm:w-12 sm:h-12 aspect-square rounded-full flex items-center justify-center bg-primary'>
+                            <img src={logo} alt="logo" className='w-6 h-6 sm:w-7 sm:h-7' />
                         </div>
-                        <div className="h-1/4  flex flex-col justify-center px-8" style={{transformStyle: "preserve-3d"}}>
-
-                                <h1 className="text-3xl font-bold" style={{transform: "translateZ(40px)"}}>{project_name}</h1>
-
-
-                                <span
-                                    className="font-bold text-gray02"
-                                    style={{transform: "translateZ(30px)"}}
-                                >
-                                    {isHovered ? 'Show project' : project_group}
-                                </span>
-
+                        <div className='flex flex-col'>
+                            <h1 className='font-bold text-2xl sm:text-3xl'>{title}</h1>
+                            <h2 className='font-semibold text-sm sm:text-base md:text-lg opacity-50'>{group}</h2>
                         </div>
+                    </div>
 
+                    
+                    <p className='opacity-50 text-sm md:text-base'  style={{ transform: "translateZ(30px)" }}>{truncateText(paragraph, 100)}</p>
+                    <button className="border-2 py-2 w-40 rounded-md hover:bg-white hover:text-gray03 transition-all"  style={{ transform: "translateZ(20px)" }}>Read more..</button>
                 </div>
-                </Tilt>
-                </Reveal>
+                
+                <div className='hidden sm:block w-1/2 aspect-square bg-gray02 rounded-md'  style={{ transform: "translateZ(20px)" }}>
+                    {/* <img src={thumbnail} alt="" className='w-full aspect-square rounded-md' /> */}
+                </div>
+
+                
+                </div>
+                
+                </Tilt></Reveal>
             </RouterLink>
         </>
     );

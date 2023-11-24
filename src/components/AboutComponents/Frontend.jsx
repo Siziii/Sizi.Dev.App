@@ -6,7 +6,7 @@ import Tilt from "../../utils/Tilt";
 const Frontend = () => {
     const languages = ['Html', 'CSS3', 'Javascript', 'React', 'Django', 'Androidstudio'];
 
-    const devTools = ['Tailwindcss', 'Bootstrap', 'Framer Motion', 'Github', 'Git', 'Vite', 'Vercel', 'Docker', 'Sass', 'Visual Studio'];
+    const devTools = ['Tailwindcss', 'Bootstrap', 'Framer Motion', 'Github', 'Git', 'Vite', 'Vercel', 'Docker', 'Sass', 'VS Code'];
 
     // Function to map tech names to icons using the techIcons data
     function getTechIcons(techNames) {
@@ -28,7 +28,7 @@ const Frontend = () => {
                         <FaCode size={20} />
                     </div>
                     <h1 className="font-bold text-2xl" style={{ transform: "translateZ(40px)" }}>Frontend developer</h1>
-                    <span className="font-light" style={{ transform: "translateZ(30px)" }}>Crafting Digital Experiences Through Code</span>
+                    <span style={{ transform: "translateZ(30px)" }}>Crafting Digital Experiences Through Code</span>
                 </div>
 
                 <div className="flex h-full flex-col items-center"style={{ transform: "translateZ(20px)" }}>
@@ -37,7 +37,7 @@ const Frontend = () => {
                         {languageIcons.map((icon, index) => (
                             <div key={index} className="flex justify-center group">
                                 {icon}
-                                <span className="pointer-events-none opacity-0 absolute translate-y-4 group-hover:translate-y-8 group-hover:opacity-100 transition-all">
+                                <span className="pointer-events-none opacity-0 absolute translate-y-4 group-hover:translate-y-8 group-hover:opacity-100 transition-all whitespace-nowrap">
                                     {languages[index]}
                                 </span>
                             </div>
@@ -48,7 +48,7 @@ const Frontend = () => {
                         {devToolIcons.map((icon, index) => (
                             <div key={index} className="flex justify-center group">
                                 {icon}
-                                <span className="pointer-events-none opacity-0 absolute translate-y-4 group-hover:translate-y-8 group-hover:opacity-100 transition-all">
+                                <span className="pointer-events-none opacity-0 absolute translate-y-4 group-hover:translate-y-8 group-hover:opacity-100 transition-all whitespace-nowrap">
                                     {devTools[index]}
                                 </span>
                             </div>
