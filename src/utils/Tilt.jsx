@@ -1,6 +1,4 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import Reveal from "./Reveal";
-
 
 const Tilt = ({ children }) => {
     const x = useMotionValue(0);
