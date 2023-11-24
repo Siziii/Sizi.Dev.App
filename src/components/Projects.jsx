@@ -61,6 +61,7 @@ const Projects = () => {
                             link={project.project_link}
                             paragraph={project.paragraph}
                             logo={project.logo}
+                            theme={project.theme}
                         />
                     ))}
                 </div>
