@@ -8,6 +8,7 @@ import Socials from "./Socials";
 import ContactButton from "./ContactButton";
 import Contact from "./Contact";
 import Navbar from "./Navbar";
+
 const MainPage = () => {
     const initialActivePage = localStorage.getItem('activepage') || 'home';
     const [activepage, setActivePage] = useState(initialActivePage);

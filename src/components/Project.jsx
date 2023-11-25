@@ -37,8 +37,8 @@ const Project = ({thumbnail, title, group, link, paragraph,logo,theme}) => {
                     <button className="border-2 py-2 w-40 rounded-md hover:bg-white hover:text-gray03 transition-all"  style={{ transform: "translateZ(20px)" }}>Read more..</button>
                 </div>
                 
-                <div className='hidden sm:block w-1/2 aspect-square bg-[#212122] rounded-md'  style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d"}}>
-                    <img src={thumbnail} alt="" className='w-full h-full aspect-square rounded-md' style={{ transform: "translateZ(30px)"}}/>
+                <div className='hidden sm:block w-1/2 aspect-square bg-[#212122] rounded-md'  style={{ transform: "translateZ(10px)", transformStyle: "preserve-3d"}}>
+                    <img src={thumbnail} alt="" className='w-full h-full aspect-square rounded-md' style={{ transform: "translateZ(40px)"}}/>
                 </div>
 
                 

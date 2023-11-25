@@ -30,7 +30,7 @@ const projectData = [
         id: 'SkySync',
         title: 'SkySync',
         subtitle: 'Weather forecast application',
-        paragraph: "SkySync is a weather forecast application designed to provide users with a visually appealing and intuitive way to check the weather. I created this project to practice fetching data from APIs, utilizing three different APIs for various functionalities.",
+        paragraph: "SkySync is a weather forecast application designed to provide users with a visually appealing and intuitive way to check the weather. I created this project to practice fetching data from APIs, utilizing three different APIs for various functionalities. Also, I incorporated drag-and-drop feature powered by the Beautiful DND (Drag and Drop) library. This feature enables users to easily arrange the order of cities.",  
         tech_title: 'Built with:',
         tech: ['React', 'Vite', 'Tailwindcss', 'Vercel', 'Github', 'Figma'],
         btn01_text: 'Visit Site',

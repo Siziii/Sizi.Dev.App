@@ -23,7 +23,7 @@ const Frontend = () => {
         <Reveal><Tilt>
             <div className="flex flex-col justify-center items-center py-8 bg-gray01 sm:rounded-md" style={{ transformStyle: "preserve-3d" }}>
 
-                <div className="flex flex-col items-center" style={{ transformStyle: "preserve-3d" }}>
+                <div className="flex flex-col items-center px-4 text-center" style={{ transformStyle: "preserve-3d" }}>
                     <div className="rounded-full bg-primary w-12 h-12 mb-2 flex items-center justify-center" style={{ transform: "translateZ(40px)" }}>
                         <FaCode size={20} />
                     </div>

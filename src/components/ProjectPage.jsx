@@ -6,6 +6,7 @@ import Page404 from './Page404';
 import { FiHome, FiMail } from 'react-icons/fi';
 import { BsArrowReturnLeft, BsFillForwardFill } from 'react-icons/bs';
 import Reveal from '../utils/Reveal';
+import Tilt from '../utils/Tilt';
 
 const ProjectPage = ({ id }) => {
     // Retrieve project data based on the id
@@ -65,9 +66,11 @@ const ProjectPage = ({ id }) => {
             <div className="flex w-full h-full flex-col md:flex-row">
 
                 <div className="w-full md:w-1/2 h-full bg-gray04">
-                    <div className='w-full h-full flex justify-center items-center'>
-                        <img src={project.image} alt="project_image" className='z-10 w-[80%] aspect-square mb-8 mt-24 md:m-0 max-w-xl rounded-lg md:hover:scale-110 md:hover:brightness-105 transition-all duration-300 shadow-[0px_50px_30px_-50px_rgba(0,0,0,.5)] md:hover:shadow-[0px_20px_30px_-50px_rgba(0,0,0,1)]' />
+               
+                    <div className='flex items-center justify-center w-full h-full'>
+                        <img src={project.image} alt="project_image" className='z-10 w-[80%] aspect-square mb-8 mt-24 md:m-0 max-w-xl rounded-lg md:hover:-translate-y-8 transition-all duration-500'/>
                     </div>
+                    
                 </div>
 
                 <div className="w-full md:w-1/2 h-full flex flex-col justify-center">

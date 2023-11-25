@@ -7,11 +7,11 @@ import Reveal from "../utils/Reveal";
 const ContactButton = ({ activepage }) => {
 
     const [buttonType, setButtonType] = useState(activepage === 'home' ? 'large' : 'small')
-    const transitionDelay = activepage === "home" ? 0 : .5;
+    const transitionDelay = activepage === "home" ? 0 : .4;
 
     const buttonVariations = {
         home: { x: 0, y: 0, opacity: 1 },
-        about: { x: "-82vw", y: "40vh", opacity: 1, padding_top: '0.5rem' },
+        about: { x: "-82vw", y: "40vh", opacity: 1 },
         projects: { x: "-82vw", y: "40vh", opacity: 1 },
         contact: { x: "-82vw", y: "40vh", opacity: 0 },
     };
@@ -21,7 +21,7 @@ const ContactButton = ({ activepage }) => {
         if (activepage === 'home') {
             timer = setTimeout(() => {
                 setButtonType('large');
-            }, 700);
+            }, 1000);
         } else {
             setButtonType('small');
         }
@@ -37,10 +37,10 @@ const ContactButton = ({ activepage }) => {
                     <Reveal delay={.7}>
                     <Link to="contact" smooth={true} duration={1500}>
                         <motion.button
-                            className={`pointer-events-auto group rounded-full border-2 transition-all hover:bg-white ${buttonType === 'large' ? 'py-2 px-12' : 'p-3'}`}
+                            className={`h-12 pointer-events-auto group rounded-full border-2 transition-all duration-300 hover:bg-white ${buttonType === 'large' ? 'py-2 px-12' : 'p-3'}`}
                             initial={buttonVariations[activepage]}
                             animate={buttonVariations[activepage]}
-                            transition={{ duration: 0.2, ease: "easeInOut",delay: transitionDelay }}
+                            transition={{ duration: 0.2, ease: "easeInOut", delay: transitionDelay }}
                             disabled={activepage === "contact"}
                         >
                         {
@@ -48,14 +48,20 @@ const ContactButton = ({ activepage }) => {
                                 <motion.div
                                     initial={{ scale: 0 }}
                                     animate={{ scale: 1 }}
-                                    transition={{ duration: 0.1, ease: "easeOut" }}
+                                    transition={{ duration: .2, ease: "easeOut",delay: .2 }}
                                 >
                                     <span className="text-white group-hover:text-gray03 transition-all">Hire me</span>
                                 </motion.div>
                             ) : (
-                                <Reveal>
-                                    <FiMail size={20} className="group-hover:fill-gray03 group-hover:scale-125" />
-                                </Reveal>
+                                <motion.div
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ duration: .2, ease: "easeOut",delay: .2 }}
+                                >
+                                    <FiMail size={20} className="group-hover:fill-gray03 group-hover:scale-125" />          
+                                </motion.div>
+                                    
+
                             )
                         }
                         </motion.button>

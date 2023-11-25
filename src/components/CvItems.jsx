@@ -3,7 +3,7 @@ import { FaFilePdf } from "react-icons/fa6";
 
 const CvItems = ({ language }) => {
 
-    const pdfLink = language === 'English' ? ("/pdf/Ivan_Skara_CV_eng.pdf") : ("/pdf/Ivan_Skara_CV_hrv.pdf");
+    const pdfLink = language === 'ZZEnglish' ? ("/pdf/Ivan_Skara_CV_eng.pdf") : ("/pdf/Ivan_Skara_CV_hrv.pdf");
 
     return (
         <a href={pdfLink} download className="cursor-pointer w-28 sm:w-36 h-44 sm:h-48 bg-[#282828] rounded-lg flex flex-col group relative ">

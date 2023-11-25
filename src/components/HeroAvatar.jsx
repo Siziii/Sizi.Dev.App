@@ -1,4 +1,5 @@
 import avatar from '../assets/avatar.png'
+import avatar_mobile from '../assets/avatar_mobile.png'
 import { useEffect, useState, useRef } from 'react';
 
 const HeroAvatar = () => {
@@ -60,7 +61,7 @@ const HeroAvatar = () => {
             </div>
 
             <div className='flex xl:hidden justify-center items-center'>
-                <img src={avatar} alt="" className='w-full max-w-xs' />
+                <img src={avatar_mobile} alt="" className='w-full max-w-xs' />
             </div>
         </div>
     );

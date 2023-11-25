@@ -1,4 +1,3 @@
-import HeroImage from "./HeroImage";
 import { Link } from "react-scroll";
 import Reveal from "../utils/Reveal";
 import { useTypewriter, Cursor } from 'react-simple-typewriter'

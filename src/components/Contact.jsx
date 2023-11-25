@@ -15,7 +15,7 @@ const Contact = () => {
     return (
         <div className="bg-gray0 flex justify-center items-center w-full h-full ">
 
-            <div className="flex flex-col md:flex-row w-[80%] justify-center pb-8">
+            <div className="flex flex-col md:flex-row w-[80%] justify-center pt-8 pb-16">
 
                 <div className="flex justify-center items-center h-[300px] xs:h-[400px] md:w-1/2 w-full">
                     <Suspense fallback="Loading Animation...">

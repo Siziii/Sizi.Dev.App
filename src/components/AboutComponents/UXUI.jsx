@@ -21,7 +21,7 @@ const UXUI = () => {
         <Reveal><Tilt>
             <div className="bg-gray01 sm:rounded-md h-full flex flex-col justify-center items-center py-8" style={{ transformStyle: "preserve-3d" }}>
                 
-                <div className="flex flex-col items-center" style={{ transformStyle: "preserve-3d" }}>
+                <div className="flex flex-col items-center px-4 text-center" style={{ transformStyle: "preserve-3d" }}>
                     <div className="rounded-full bg-primary w-12 h-12 mb-2 flex items-center justify-center" style={{ transform: "translateZ(40px)" }}>
                         <FaPalette size={20} />
                     </div>
