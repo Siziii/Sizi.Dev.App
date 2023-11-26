@@ -48,7 +48,7 @@ const Navbar = () => {
     return (
         <>
             <div className='fixed z-50'>
-                <div className="fixed w-full h-16 dotted-bg flex items-center justify-center border-b-2 border-gray02">
+                <div className="fixed w-full h-16 dotted-bg flex items-center justify-center border-b-2 border-white">
                     <div className='h-full flex items-center justify-between w-[80%]'>
                         <Socials/>
                         <div onClick={handleNav} className='block md:hidden cursor-pointer'>

@@ -1,31 +1,76 @@
 import Project from "./Project";
-import PlantpulseThumbnail from "../assets/project-images/plantpulse_thumbnail.jpg"; 
-import ArtStationThumbnail from "../assets/project-images/artstation_thumbnail.jpg"; 
-import ColorPickerThumbnail from "../assets/project-images/colorpicker_thumbnail.jpg"; 
-import KickSnareThumbnail from "../assets/project-images/kicksnare_thumbnail.jpg";
-import RustSkinsThumbnail from "../assets/project-images/rustskins_thumbnail.jpg"; 
-import PortfolioThumbnail from"../assets/project-images/portfolio_thumbnail.jpg"; 
+import projectData from "../data/projectData";
+import { useState } from "react";
+import OutlinedTitle from "../utils/OutlinedTitle";
 const Projects = () => {
 
-    const webDevProjects = [
-        { id: 1, project_img: PlantpulseThumbnail, project_name: "Plantpulse", project_group:"Web Development", project_link:'/projects/Plant-Pulse'},
-        { id: 2, project_img: ColorPickerThumbnail, project_name: "ColorPicker", project_group:"Web Development", project_link:'/projects/Color-Picker'},
-        { id: 3, project_img: PortfolioThumbnail, project_name: "Portfolio Website", project_group:"Web Development", project_link:'/projects/Portfolio-Website'},
-        { id: 4, project_img: KickSnareThumbnail, project_name: "KickSnare", project_group:"Game Development", project_link:'/projects/KickSnare'},
-        { id: 5, project_img: RustSkinsThumbnail, project_name: "Rust Skins", project_group:"3D Art", project_link:'/projects/Rust-Skins'},
-        { id: 6, project_img: ArtStationThumbnail, project_name: "Artstation Portfolio", project_group:"3D Art", project_link:'/projects/Artstation-Portfolio'},
-    ];
-    
+    const [isActive, setIsActive] = useState('All');
+
+    //filter projects
+    const filteredProjects = projectData.filter((project) => {
+        return isActive === 'All' || project.project_group === isActive;
+    })
+
+    const handleCategoryClick = (category) => {
+        setIsActive(category);
+    }
+
+    // Calculate project counts for each category
+    const categoryCounts = {
+        'All': projectData.length,
+        ...projectData.reduce((acc, project) => {
+            const category = project.project_group;
+            acc[category] = (acc[category] || 0) + 1;
+            return acc;
+        }, {})
+    }
+
+    const groups = [
+        { id: 0, label: "All", group: "All" },
+        { id: 1, label: "Web Dev", group: "Web Development" },
+        { id: 2, label: "3D Art", group: "3D Art" },
+        { id: 3, label: "Game Dev", group: "Game Development" },
+    ]
+
     return (
-        <div className="w-[80%] h-full mx-auto">
+        <div className="w-[90%] sm:w-[80%] h-full mx-auto">
             <div className="flex flex-col w-full h-full justify-center py-16">
-                <div className="flex flex-col items-center">
-                    <h2 className="text-primary font-bold text-1xl sm:text-2xl">~ From Concept to Creation ~</h2>
-                    <h1 className="font-bold text-2xl sm:text-5xl mb-8">Discover what I've built</h1>
+
+                <div className="flex flex-col items-center px-2">
+                    <h2 className="text-primary font-bold sm:text-2xl text-center">~ From Concept to Creation ~</h2>
+                    <OutlinedTitle text={"Discover what I've built"} mt={16} mb={24} justify={"center"}/>
                 </div>
-                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                    {webDevProjects.map((project) => (
-                        <Project key={project.id} project_img={project.project_img} project_name={project.project_name} project_group={project.project_group} project_link={project.project_link}/>
+
+                <div className="w-full flex justify-center pb-10">
+                    <ul className="flex justify-center gap-1 sm:gap-3 text-sm sm:text-base font-bold ">
+                        {groups.map((group, index) => {
+                            return (
+                                <li key={group.id} className="flex gap-3 sm:gap-4">
+                                    <span
+                                        className={` cursor-pointer hover:opacity-100 transition-all ${isActive === group.group ? 'text-primary opacity-100' : 'opacity-50'}`}
+                                        onClick={() => handleCategoryClick(group.group)}
+                                    >
+                                        <span className=" text-inherit">{group.label}</span>
+                                        <span className="text-inherit text-[12px] absolute translate-x-[2px] -translate-y-1"> {categoryCounts[group.group]}</span>
+                                    </span>
+                                    {index < groups.length - 1 && <span className="opacity-50">/</span>}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+                <div className="grid gap-4 grid-cols-1 xl:grid-cols-2">
+                    {filteredProjects.map((project) => (
+                        <Project
+                            key={project.id}
+                            thumbnail={project.thumbnail}
+                            title={project.title}
+                            group={project.project_group}
+                            link={project.project_link}
+                            paragraph={project.paragraph}
+                            logo={project.logo}
+                            theme={project.theme}
+                        />
                     ))}
                 </div>
             </div>

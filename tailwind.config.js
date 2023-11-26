@@ -8,14 +8,10 @@ export default {
     extend: {
       colors:{
         'primary': '#18d1b0',
-        'gray01': '#1C1D1E',
-        'gray02': '#6B6B6B',
-        'gray03': '#161717',
-        'gray04': '#101111',
+        'gray01': '#151516',
+        'gray02': '#8a8a8b',
+        'gray03': '#0b0b0c',
         'black-overlay':'rgba(36, 38, 39, 0.6)',
-      },
-      fontFamily: {
-        code: ['Source Code Pro'],
       },
       screens: {
         'xs': '400px',

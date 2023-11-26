@@ -5,6 +5,10 @@ import Page404 from "./components/Page404";
 import projectData from './data/projectData';
 import ScrollToAnchor from "./utils/ScrollToAnchor";
 import CvDownload from "./components/CvDownload";
+import Preloader from './components/Preloader'
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+
 function App() {
   console.log(`
 
@@ -16,21 +20,22 @@ function App() {
   ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ ╚═╝
                                               
   `)
+
   return (
-    <> 
-    <ScrollToAnchor/>
-    <Routes>
-      <Route path="/" element={<MainPage/>}/>
-      {projectData.map((project) => (
+    <>
+      <ScrollToAnchor />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        {projectData.map((project) => (
           <Route
             key={project.id}
             path={`/projects/${project.id}`}
             element={<ProjectPage id={project.id} />}
           />
-      ))}
-      <Route path="/curriculum-vitae" element={<CvDownload/>}/>
-      <Route path="*" element={<Page404/>}/>
-    </Routes>
+        ))}
+        <Route path="/curriculum-vitae" element={<CvDownload />} />
+        <Route path="*" element={<Page404 />} />
+      </Routes>
     </>
   );
 }

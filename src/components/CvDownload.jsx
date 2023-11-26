@@ -11,7 +11,7 @@ const CvDownload = () => {
                     <CvItems language={"Croatian"}/>
                 </div>
                 <div className="text-center w-full p-4">
-                    <span className="text-gray02 font-bold">Download CV in Your Preferred Language</span>
+                    <span className="opacity-50 font-bold">Download CV in Your Preferred Language</span>
                 </div>
                 
             </div>
