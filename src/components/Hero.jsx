@@ -17,9 +17,9 @@ const Hero = () => {
             <div className="flex flex-col justify-center items-center xl:items-start  w-full xl:w-2/5">
                 <div className="flex">
                     <div className="flex flex-col -mr-8">
-                        <span className="font-bold font-code opacity-50">{`<div>`}</span>
+                        <span className="font-bold font-mono opacity-50">{`<div>`}</span>
                         <hr className="h-full border-l-2 opacity-50 rounded-full w-[2px]" />
-                        <span className="font-bold font-code opacity-50">{`</div>`}</span>
+                        <span className="font-bold font-mono opacity-50">{`</div>`}</span>
                     </div>
 
                     <div className="flex flex-col sm:mr-8 py-8">

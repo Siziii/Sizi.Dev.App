@@ -25,9 +25,9 @@ const OutlinedTitle = ({ text,mt,mb,justify }) => {
         style={{marginTop:mt,marginBottom:mb,justifyContent:justify}}
         >
             <motion.h1
-                className="flex whitespace-pre items-center justify-center font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl outlinetext cursor-default hover:text-gray03 uppercase"
+                className={`flex whitespace-pre items-center h-24 justify-center font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl cursor-default uppercase ${isHovered?('text-gray03 outlinetext'):('')}`}
                 onHoverStart={() => setIsHovered(true)}
-                onHoverEnd={() => setIsHovered(false)}
+                onHoverEnd={() =>setIsHovered(false)}
             >
                 {titleArray.map((letter, index) => (
                     <motion.span
@@ -37,6 +37,7 @@ const OutlinedTitle = ({ text,mt,mb,justify }) => {
                         initial="initial"
                         custom={index}
                         className='text-inherit'
+                        transition={{ type:"spring",stiffness: 200, damping: 9 }}
                     >
                         {letter}
                     </motion.span>

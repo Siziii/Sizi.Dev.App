@@ -14,9 +14,6 @@ export default {
         'gray04': '#101111',
         'black-overlay':'rgba(36, 38, 39, 0.6)',
       },
-      fontFamily: {
-        code: ['Source Code Pro'],
-      },
       screens: {
         'xs': '400px',
       },

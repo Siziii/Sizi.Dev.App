@@ -45,17 +45,15 @@ const Projects = () => {
                     <ul className="flex justify-center gap-1 sm:gap-3 text-sm sm:text-base font-bold ">
                         {groups.map((group) => {
                             return (
-                                <>
-                                    <li key={group.id} className="flex gap-1 sm:gap-3">
-                                        <span
-                                            className={`cursor-pointer hover:opacity-100 transition-all ${isActive === group.group ? 'text-primary opacity-100' : 'opacity-50'}`}
-                                            onClick={() => handleCategoryClick(group.group)}
-                                        >
-                                            {group.label} ({categoryCounts[group.group]})
-                                        </span>
-                                        <span className="opacity-50">/</span>
-                                    </li>
-                                </>
+                                <li key={group.id} className="flex gap-1 sm:gap-3">
+                                    <span
+                                        className={`cursor-pointer hover:opacity-100 transition-all ${isActive === group.group ? 'text-primary opacity-100' : 'opacity-50'}`}
+                                        onClick={() => handleCategoryClick(group.group)}
+                                    >
+                                        {group.label} ({categoryCounts[group.group]})
+                                    </span>
+                                    <span className="opacity-50">/</span>
+                                </li>
                             )
                         })}
                     </ul>

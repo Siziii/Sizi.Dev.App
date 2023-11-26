@@ -8,6 +8,7 @@ import Socials from "./Socials";
 import ContactBtn from "./ContactBtn";
 import Contact from "./Contact";
 import Navbar from "./Navbar";
+import Preloader from "./Preloader";
 
 const MainPage = () => {
     const initialActivePage = localStorage.getItem('activepage') || 'home';
@@ -49,40 +50,42 @@ const MainPage = () => {
     }, [activepage]);
 
     return (
-        <div className="scroll-smooth bg-gray01 overflow-hidden">
-            <div className="hidden md:block">
-                
-                {activepage && (<>
-                    <ScrollIndicator activepage={activepage} />
-                    <ContactBtn activepage={activepage} />
-                    </>
-                )}
+        <Preloader delay={700}>
+            <div className="scroll-smooth bg-gray01 overflow-hidden">
+                <div className="hidden md:block">
 
-                <div className="pointer-events-none h-32 w-full absolute flex justify-center">
-                    <hr className="z-50 border-t-2 w-[8%] rounded-r-full border-gray02 absolute top-[63px] left-0" />
-                    <div className="w-[80%] flex justify-between ">
-                        <Socials />
+                    {activepage && (<>
+                        <ScrollIndicator activepage={activepage} />
+                        <ContactBtn activepage={activepage} />
+                    </>
+                    )}
+
+                    <div className="pointer-events-none h-32 w-full absolute flex justify-center">
+                        <hr className="z-50 border-t-2 w-[8%] rounded-r-full border-gray02 absolute top-[63px] left-0" />
+                        <div className="w-[80%] flex justify-between ">
+                            <Socials />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="md:hidden">
-                <Navbar />
-            </div>
+                <div className="md:hidden">
+                    <Navbar />
+                </div>
 
-            <section ref={HomeRef} id="home" className="min-h-screen flex items-center justify-center bg-gray01">
-                <Hero />
-            </section>
-            <section ref={AboutRef} id="about" className="bg-gray03">
-                <About />
-            </section>
-            <section ref={ProjectsRef} id="projects" className="bg-gray03">
-                <Projects />
-            </section>
-            <section ref={ContactRef} id="contact" className="bg-gray01">
-                <Contact />
-            </section>
-        </div>
+                <section ref={HomeRef} id="home" className="min-h-screen flex items-center justify-center bg-gray01">
+                    <Hero />
+                </section>
+                <section ref={AboutRef} id="about" className="bg-gray03">
+                    <About />
+                </section>
+                <section ref={ProjectsRef} id="projects" className="bg-gray03">
+                    <Projects />
+                </section>
+                <section ref={ContactRef} id="contact" className="bg-gray01">
+                    <Contact />
+                </section>
+            </div>
+        </Preloader>
     );
 }
 export default MainPage;
