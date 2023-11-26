@@ -49,10 +49,10 @@ const HeroAvatar = () => {
                     <div className='w-3 h-3 rounded-full bg-[#000000]' />
                 </div>
                 <div className='absolute z-10 w-8 h-8 flex justify-center items-end' ref={manEyeLeft} style={menLeftEyeStyle}>
-                    <div className='w-6 h-6 rounded-full bg-[#000000]' />
+                    <div className='w-[22px] h-[22px] rounded-full bg-[#000000]' />
                 </div>
                 <div className='absolute z-10  w-8 h-8 flex justify-center items-end' ref={manEyeRight} style={manRightEyeStyle}>
-                    <div className='w-6 h-6  rounded-full bg-[#000000]' />
+                    <div className='w-[22px] h-[22px] rounded-full bg-[#000000]' />
                 </div>
             </div>
 
