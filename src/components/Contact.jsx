@@ -2,6 +2,7 @@ import { useState, lazy, Suspense } from "react";
 import { FiMail } from "react-icons/fi";
 import Reveal from "../utils/Reveal";
 import { Link } from "react-scroll";
+import OutlinedTitle from "../utils/OutlinedTitle";
 
 //lazy load 3dAnims
 const LazyWorld_desktop = lazy(() => import('./Anims/World_desktop'));
@@ -28,10 +29,10 @@ const Contact = () => {
                 <div className="flex flex-col justify-center md:w-1/2 w-full">
                     <Reveal>
                         <div className="flex items-center mb-4">
-                            <div className="h-12 w-12 bg-primary rounded-full flex justify-center items-center hover:animate-spin">
+                            <div className="h-12 w-12 aspect-square mr-4 bg-primary rounded-full flex justify-center items-center hover:animate-spin">
                                 <FiMail size={24} />
                             </div>
-                            <h1 className="text-3xl xs:text-5xl font-semibold ml-4">Say hello</h1>
+                            <OutlinedTitle text={"Say Hello"} justify={"left"}/>
                         </div>
                     </Reveal>
                     <Reveal direction="left" delay={.2}>

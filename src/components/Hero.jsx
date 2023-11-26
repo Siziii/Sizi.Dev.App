@@ -2,6 +2,7 @@ import { Link } from "react-scroll";
 import Reveal from "../utils/Reveal";
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import HeroAvatar from "./HeroAvatar";
+import OutlinedTitle from "../utils/OutlinedTitle";
 
 const Hero = () => {
     const [text] = useTypewriter({
@@ -13,7 +14,7 @@ const Hero = () => {
     })
     return (
         <div className=" w-[80%] h-full flex flex-col-reverse xl:flex-row mx-auto gap-8 justify-center py-16">
-            <div className="flex flex-col justify-center items-center w-full xl:w-2/5">
+            <div className="flex flex-col justify-center items-center xl:items-start  w-full xl:w-2/5">
                 <div className="flex">
                     <div className="flex flex-col -mr-8">
                         <span className="font-bold font-code opacity-50">{`<div>`}</span>
@@ -25,7 +26,7 @@ const Hero = () => {
                         <Reveal direction="left">
                             <span className=" text-2xl -mb-1 ml-1">Hello, I'm</span>
                         </Reveal>
-                        <h1 className="font-bold text-4xl xs:text-5xl sm:text-7xl">Ivan Škara</h1>
+                        <OutlinedTitle text={"Ivan Škara"} mt={10} mb={10} justify={"left"}/>
                         <Reveal direction="right" delay={1}>
                             <div className="w-full text-right mt-1">
                                 <span className="font-bold text-xl text-primary">{text}<Cursor cursorStyle='<' /></span>
@@ -35,11 +36,11 @@ const Hero = () => {
 
                 </div>
                 <div className="mt-8">
-                    <Reveal>
-                        <Link to="about" smooth={true} duration={500}>
-                            <button className="border-2 py-2 w-40 rounded-full hover:bg-white hover:text-gray03 transition-all">About</button>
-                        </Link>
-                    </Reveal>
+                <Reveal>
+                    <Link to="about" smooth={true} duration={500}>
+                        <button className="border-2 py-2 w-40 rounded-full hover:bg-white hover:text-gray03 transition-all">About</button>
+                    </Link>
+                </Reveal>
                 </div>
 
             </div>

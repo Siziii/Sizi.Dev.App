@@ -25,3 +25,8 @@
   background-size: 10px 10px;
   backdrop-filter: blur(3px);
 }
+
+.outlinetext:hover{
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}

@@ -1,6 +1,7 @@
 import Project from "./Project";
 import projectData from "../data/projectData";
 import { useState } from "react";
+import OutlinedTitle from "../utils/OutlinedTitle";
 const Projects = () => {
 
     const [isActive, setIsActive] = useState('All');
@@ -37,7 +38,7 @@ const Projects = () => {
 
                 <div className="flex flex-col items-center">
                     <h2 className="text-primary font-bold sm:text-2xl text-center">~ From Concept to Creation ~</h2>
-                    <h1 className="font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-8 uppercase text-center">Discover what I've built</h1>
+                    <OutlinedTitle text={"Discover what I've built"} mt={16} mb={24} justify={"center"}/>
                 </div>
 
                 <div className="w-full flex justify-center pb-10">
@@ -45,14 +46,15 @@ const Projects = () => {
                         {groups.map((group) => {
                             return (
                                 <>
-                                    <li
-                                        key={group.id}
-                                        className={`cursor-pointer hover:opacity-100 transition-all ${isActive === group.group ? 'text-primary opacity-100' : 'opacity-50'}`}
-                                        onClick={() => handleCategoryClick(group.group)}
-                                    >
-                                        {group.label} ({categoryCounts[group.group]})
+                                    <li key={group.id} className="flex gap-1 sm:gap-3">
+                                        <span
+                                            className={`cursor-pointer hover:opacity-100 transition-all ${isActive === group.group ? 'text-primary opacity-100' : 'opacity-50'}`}
+                                            onClick={() => handleCategoryClick(group.group)}
+                                        >
+                                            {group.label} ({categoryCounts[group.group]})
+                                        </span>
+                                        <span className="opacity-50">/</span>
                                     </li>
-                                    <span className="opacity-50">/</span>
                                 </>
                             )
                         })}

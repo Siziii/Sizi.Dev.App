@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
 import Socials from "./Socials";
-import ContactButton from "./ContactButton";
+import ContactBtn from "./ContactBtn";
 import Contact from "./Contact";
 import Navbar from "./Navbar";
 
@@ -25,15 +25,19 @@ const MainPage = () => {
 
     useEffect(() => {
         if (isHomeInView) {
+
             setActivePage('home')
         }
         else if (isAboutInView) {
+
             setActivePage('about')
         }
         else if (isProjectsInView) {
+
             setActivePage('projects')
         }
         else if (isContactInView) {
+
             setActivePage('contact')
         }
     }, [isHomeInView, isAboutInView, isProjectsInView, isContactInView]);
@@ -44,12 +48,16 @@ const MainPage = () => {
         localStorage.setItem('activepage', activepage);
     }, [activepage]);
 
-
     return (
         <div className="scroll-smooth bg-gray01 overflow-hidden">
             <div className="hidden md:block">
-                <ScrollIndicator activepage={activepage} />
-                <ContactButton activepage={activepage} />
+                
+                {activepage && (<>
+                    <ScrollIndicator activepage={activepage} />
+                    <ContactBtn activepage={activepage} />
+                    </>
+                )}
+
                 <div className="pointer-events-none h-32 w-full absolute flex justify-center">
                     <hr className="z-50 border-t-2 w-[8%] rounded-r-full border-gray02 absolute top-[63px] left-0" />
                     <div className="w-[80%] flex justify-between ">

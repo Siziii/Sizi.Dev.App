@@ -18,7 +18,6 @@ const HeroAvatar = () => {
 
         const rad = Math.atan2(mouseCoordinates.x - elX, mouseCoordinates.y - elY);
         const rot = rad * (180 / Math.PI) * -1;
-
         return rot;
     }
 
@@ -33,11 +32,8 @@ const HeroAvatar = () => {
     }, [])
 
     const catLeftEyeStyle = { transform: `translateX(-9.32rem) translateY(-1.4rem) rotate(${calcAngle(catEyeLeft)}deg)` }
-
     const catRightEyeStyle = { transform: `translateX(-7.1rem) translateY(-1.4rem) rotate(${calcAngle(catEyeRight)}deg)` }
-
     const menLeftEyeStyle = { transform: `translateX(-1.45rem) translateY(-2rem) rotate(${calcAngle(manEyeLeft)}deg)` }
-
     const manRightEyeStyle = { transform: `translateX(3.1rem) translateY(-2rem) rotate(${calcAngle(manEyeRight)}deg)` }
 
 

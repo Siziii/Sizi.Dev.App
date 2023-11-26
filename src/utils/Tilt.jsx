@@ -34,7 +34,7 @@ const Tilt = ({ children }) => {
 
         const xPct = mouseX / w - 0.5;
         const yPct = mouseY / h - 0.5;
-        console.log(xPct, yPct)
+
         x.set(xPct)
         y.set(yPct)
     }
