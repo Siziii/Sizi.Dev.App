@@ -25,7 +25,7 @@ const OutlinedTitle = ({ text,mt,mb,justify }) => {
         style={{marginTop:mt,marginBottom:mb,justifyContent:justify}}
         >
             <motion.h1
-                className={`flex whitespace-pre items-center h-24 justify-center font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl cursor-default uppercase ${isHovered?('text-gray03 outlinetext'):('')}`}
+                className={`flex flex-wrap whitespace-pre items-center py-1 justify-center font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl cursor-default uppercase ${isHovered?('text-gray03 outlinetext'):('')}`}
                 onHoverStart={() => setIsHovered(true)}
                 onHoverEnd={() =>setIsHovered(false)}
             >

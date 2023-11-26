@@ -33,7 +33,7 @@ const Artist = () => {
 
                         <h2 className="text-primary font-semibold mb-2">Things I enjoy:</h2>
 
-                        <span className="opacity-50">Hard surface modeling, Procedural textures</span>
+                        <span className="opacity-50 text-center">Hard surface modeling, Procedural textures</span>
 
                         <h2 className="text-primary font-semibold mt-6 mb-2">Program Stack:</h2>
 

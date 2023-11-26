@@ -7,6 +7,12 @@ const ContactButton_new = ({ activepage }) => {
     const [buttonType, setButtonType] = useState('large')
     const [animationState, setAnimationState] = useState('home')
 
+    const scrollDelays = [
+        { id: "home", delay: 3000 },
+        { id: "about", delay: 2000 },
+        { id: "projects", delay: 1000 },
+        { id: "contact", delay: 0 }
+    ]
     const buttonVariations = {
         home: { x: 0, y: 0, opacity: 1, width: "160px" },
         about: { x: "-82vw", y: "40vh", opacity: 1, width: "44px" },
@@ -31,7 +37,7 @@ const ContactButton_new = ({ activepage }) => {
         <div className="pointer-events-none h-32 w-full fixed z-50 hidden md:block">
             <div className="h-full w-[80%] mx-auto">
                 <div className="h-full flex items-center justify-end">
-                    <Link to="contact" smooth={true} duration={1500}>
+                    <Link to="contact" smooth={true} duration={scrollDelays.find(page => page.id === activepage)?.delay || 0}>
                         <AnimatePresence mode="wait">
                             <motion.button
                                 key={'buttonKey'}

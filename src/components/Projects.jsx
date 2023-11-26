@@ -33,26 +33,27 @@ const Projects = () => {
     ]
 
     return (
-        <div className="w-[80%] h-full mx-auto">
+        <div className="w-[90%] sm:w-[80%] h-full mx-auto">
             <div className="flex flex-col w-full h-full justify-center py-16">
 
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center px-2">
                     <h2 className="text-primary font-bold sm:text-2xl text-center">~ From Concept to Creation ~</h2>
                     <OutlinedTitle text={"Discover what I've built"} mt={16} mb={24} justify={"center"}/>
                 </div>
 
                 <div className="w-full flex justify-center pb-10">
                     <ul className="flex justify-center gap-1 sm:gap-3 text-sm sm:text-base font-bold ">
-                        {groups.map((group) => {
+                        {groups.map((group, index) => {
                             return (
-                                <li key={group.id} className="flex gap-1 sm:gap-3">
+                                <li key={group.id} className="flex gap-3 sm:gap-4">
                                     <span
-                                        className={`cursor-pointer hover:opacity-100 transition-all ${isActive === group.group ? 'text-primary opacity-100' : 'opacity-50'}`}
+                                        className={` cursor-pointer hover:opacity-100 transition-all ${isActive === group.group ? 'text-primary opacity-100' : 'opacity-50'}`}
                                         onClick={() => handleCategoryClick(group.group)}
                                     >
-                                        {group.label} ({categoryCounts[group.group]})
+                                        <span className=" text-inherit">{group.label}</span>
+                                        <span className="text-inherit text-[12px] absolute translate-x-[2px] -translate-y-1"> {categoryCounts[group.group]}</span>
                                     </span>
-                                    <span className="opacity-50">/</span>
+                                    {index < groups.length - 1 && <span className="opacity-50">/</span>}
                                 </li>
                             )
                         })}
