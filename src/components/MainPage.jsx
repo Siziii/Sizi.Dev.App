@@ -61,7 +61,7 @@ const MainPage = () => {
                     )}
 
                     <div className="pointer-events-none h-32 w-full absolute flex justify-center">
-                        <hr className="z-50 border-t-2 w-[8%] rounded-r-full border-gray02 absolute top-[63px] left-0" />
+                        <hr className="z-50 border-t-2 w-[8%] rounded-r-full border-white opacity-50 absolute top-[63px] left-0" />
                         <div className="w-[80%] flex justify-between ">
                             <Socials />
                         </div>

@@ -6,7 +6,7 @@ const WhoAmI = () => {
         <Reveal><Tilt>
             <div className="bg-gray01 h-full w-full sm:rounded-md flex flex-col px-8 py-4" style={{transformStyle: "preserve-3d"}}>
                 <h1 className=" text-3xl font-semibold">Who am I?</h1>
-                <hr className="border-t-2 rounded-full border-gray02 mt-2" />
+                <hr className="border-t-2 rounded-full border-white opacity-50 mt-2" />
 
                 <div className="flex my-5 h-full flex-col sm:flex-row items-center" style={{transformStyle: "preserve-3d"}}>
                     <img src={Logo} alt="" className="w-32 h-32 mr-8 my-4 sm:my-0" style={{transform: "translateZ(30px)"}}/>

@@ -68,7 +68,7 @@ const ProjectPage = ({ id }) => {
             </div>
             <div className="flex w-full h-full flex-col md:flex-row">
 
-                <div className="w-full md:w-1/2 h-full bg-gray04">
+                <div className="w-full md:w-1/2 h-full bg-gray03">
 
                     <div className='flex items-center justify-center w-full h-full'>
                         <img src={project.image} alt="project_image" className='z-10 w-[80%] aspect-square mb-8 mt-24 md:m-0 max-w-xl rounded-lg md:hover:-translate-y-8 transition-all duration-500' />

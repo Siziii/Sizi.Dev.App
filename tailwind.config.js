@@ -9,9 +9,8 @@ export default {
       colors:{
         'primary': '#18d1b0',
         'gray01': '#151516',
-        'gray02': '#6B6B6B',
+        'gray02': '#8a8a8b',
         'gray03': '#0b0b0c',
-        'gray04': '#101111',
         'black-overlay':'rgba(36, 38, 39, 0.6)',
       },
       screens: {

@@ -6,7 +6,7 @@ const Education = () => {
         <div className="bg-gray01 sm:rounded-md px-8 py-4" style={{transformStyle: "preserve-3d"}}>
 
             <h1 className=" text-3xl font-semibold">Education</h1>
-            <hr className="border-t-2 rounded-full border-gray02 mt-2" />
+            <hr className="border-t-2 rounded-full border-whize opacity-50 mt-2" />
 
             <div className="flex justify-between items-center mt-2 " style={{transform: "translateZ(40px)"}}>
                 <h2 className="text-primary text-lg font-bold ">univ. bacc. inf.</h2>
