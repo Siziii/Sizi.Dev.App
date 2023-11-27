@@ -13,7 +13,7 @@ const Hero = () => {
         delaySpeed: 2000
     })
     return (
-        <div className=" w-[80%] h-full flex flex-col-reverse xl:flex-row mx-auto gap-8 justify-center py-16">
+        <div className=" w-[80%] h-full flex flex-col-reverse xl:flex-row mx-auto gap-4 justify-center py-24">
             <div className="flex flex-col justify-center items-center xl:items-start  w-full xl:w-2/5">
                 <div className="flex">
                     <div className="flex flex-col -mr-8">
@@ -22,7 +22,7 @@ const Hero = () => {
                         <span className="font-bold font-mono opacity-50">{`</div>`}</span>
                     </div>
 
-                    <div className="flex flex-col sm:mr-8 py-8">
+                    <div className="flex flex-col py-8">
                         <Reveal direction="left">
                             <span className=" text-2xl -mb-1 ml-1">Hello, I'm</span>
                         </Reveal>

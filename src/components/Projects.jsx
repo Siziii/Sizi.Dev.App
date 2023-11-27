@@ -2,6 +2,7 @@ import Project from "./Project";
 import projectData from "../data/projectData";
 import { useState } from "react";
 import OutlinedTitle from "../utils/OutlinedTitle";
+
 const Projects = () => {
 
     const [isActive, setIsActive] = useState('All');
@@ -34,7 +35,7 @@ const Projects = () => {
 
     return (
         <div className="w-[90%] sm:w-[80%] h-full mx-auto">
-            <div className="flex flex-col w-full h-full justify-center py-16">
+            <div className="flex flex-col w-full h-full justify-center py-4 md:pb-16 md:pt-8">
 
                 <div className="flex flex-col items-center px-2">
                     <h2 className="text-primary font-bold sm:text-2xl text-center">~ From Concept to Creation ~</h2>

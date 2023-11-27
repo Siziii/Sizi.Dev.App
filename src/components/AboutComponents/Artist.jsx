@@ -2,6 +2,7 @@ import { FaCube } from "react-icons/fa6";
 import Reveal from "../../utils/Reveal";
 import techIcons from "../../data/iconsData";
 import Tilt from "../../utils/Tilt";
+import * as s from "../../styles/CustomStyles"
 
 const Artist = () => {
     const programStack = ['Blender', 'Substance Painter', 'Substance Designer', 'Quixel Suite', 'Unity 3D'];
@@ -18,18 +19,18 @@ const Artist = () => {
     return (
         <Reveal>
             <Tilt>
-                <div className="bg-gray01 sm:rounded-md h-full flex flex-col justify-center items-center py-8" style={{ transformStyle: "preserve-3d" }}>
+                <div className="bg-gray01 sm:rounded-md h-full flex flex-col justify-center items-center py-8" style={s.p3d}>
                     
-                    <div className="flex flex-col items-center px-4 text-center" style={{ transformStyle: "preserve-3d" }}>
-                        <div className="rounded-full bg-primary w-12 h-12 mb-2 flex items-center justify-center" style={{ transform: "translateZ(40px)" }}>
+                    <div className="flex flex-col items-center px-4 text-center" style={s.p3d}>
+                        <div className="rounded-full bg-primary w-12 h-12 mb-2 flex items-center justify-center" style={s.tz40}>
                             <FaCube size={20} />
                         </div>
 
-                        <h1 className=" font-bold text-2xl" style={{ transform: "translateZ(40px)" }}>3D Artist</h1>
-                        <span className="w-full h-12 text-center mb-2" style={{ transform: "translateZ(30px)" }}>Bringing Imagination to Life in 3D</span>
+                        <h1 className=" font-bold text-2xl" style={s.tz40}>3D Artist</h1>
+                        <span className="w-full h-12 text-center mb-2" style={s.tz30}>Bringing Imagination to Life in 3D</span>
                     </div>
 
-                    <div className="flex h-full flex-col items-center" style={{ transform: "translateZ(20px)" }}>
+                    <div className="flex h-full flex-col items-center" style={s.tz20}>
 
                         <h2 className="text-primary font-semibold mb-2">Things I enjoy:</h2>
 
