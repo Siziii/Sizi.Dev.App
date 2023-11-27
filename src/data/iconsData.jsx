@@ -23,7 +23,7 @@ const techIcons = [
         { name: 'Illustrator',icon: <SiAdobeillustrator size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" />},
         { name: 'Adobe XD',icon: <SiAdobexd size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" />},
         { name: 'Figma', icon: <SiFigma size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" />},
-        { name: 'Pen and paper', icon: <BsPenFill size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" />},
+        { name: 'Pen & Paper', icon: <BsPenFill size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" />},
         { name: 'Html', icon: <SiHtml5 size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" /> },
         { name: 'CSS3', icon: <SiCss3 size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" /> },
         { name: 'Javascript', icon: <SiJavascript size={32} className="transition-all opacity-50 hover:opacity-100 hover:scale-110" /> },

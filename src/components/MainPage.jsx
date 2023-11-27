@@ -51,7 +51,7 @@ const MainPage = () => {
 
     return (
         <Preloader delay={700}>
-            <div className="scroll-smooth bg-gray01 overflow-hidden">
+            <div className="scroll-smooth bg-gray01 overflow-x-hidden">
                 <div className="hidden md:block">
 
                     {activepage && (<>

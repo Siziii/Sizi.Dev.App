@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-
+import { isMobile } from "../styles/CustomStyles";
 const Tilt = ({ children }) => {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -30,7 +30,11 @@ const Tilt = ({ children }) => {
         y.set(yPct);
     };
 
-    return (
+    return isMobile ? (
+        <div className="w-full h-full">
+            { children }
+        </div>
+    ) : (
         <motion.div
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
@@ -44,7 +48,7 @@ const Tilt = ({ children }) => {
         >
             {children}
         </motion.div>
-    );
+    )
 };
 
 export default Tilt;

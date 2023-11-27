@@ -45,8 +45,8 @@ const projectData = [
         project_link:'/projects/SkySync',
     },
     {
-        id: 'Git-Calendar',
-        title: 'Git Calendar',
+        id: 'Calendar',
+        title: 'Calendar',
         subtitle: 'Github commit calendar',
         paragraph: "GitHub Commit Calendar is a web application that allows you to visualize your GitHub repository's commit history in a calendar format. It provides a user-friendly way to explore commits made on different dates and view commit details.",
         tech_title: 'Built with:',
@@ -60,7 +60,7 @@ const projectData = [
         theme:'#00a6a6',
         thumbnail: CalendarThumbnail,
         project_group:'Web Development',
-        project_link:'/projects/Git-Calendar',
+        project_link:'/projects/Calendar',
     },
     {
         id: 'Portfolio-Website',
